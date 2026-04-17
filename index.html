@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jogo de Plantação</title>
+</head>
+
+<body>
+
+<h1>🌱 Plantação</h1>
+
+<p>🏆 Pontos: <span id="pontos">0</span></p>
+
+<button onclick="plantar()">🌱 Plantar</button>
+<button onclick="colher()">🌾 Colher</button>
+
+<p id="estado">Nada plantado</p>
+
+<script>
+let pontos = 0;
+let plantaCrescida = false;
+
+function plantar() {
+  if (plantaCrescida) {
+    document.getElementById("estado").innerText = "Já tens planta!";
+    return
